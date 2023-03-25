@@ -88,46 +88,18 @@
   }
 }
 
-@media (min-width: 2048px) {
-  h1 {
-    font-size: 5rem;
-  }
-  .start-label {
-    font-size: 3rem;
-  }
-  #start-btn {
-    font-size: 3rem;
-  }
-  .start-input {
-    font-size: 2rem;
-  }
-  .chat-title {
-    font-size: 2.25rem;
-  }
-  .chat-profile-img {
-    width: 100px;
-  }
-  .chat-messages {
-    font-size: 1.4rem;
-  }
-  .chat-item {
-    font-size: 1.2rem;
-  }
-  #toss-ad {
-    font-size: 1.25rem;
-  }
-}
-
 .start-inputs {
   display: block;
   margin-top: 20px;
   margin-bottom: 20px;
   width: 50%;
+  max-width: 600px;
 }
 
 .start-label {
   display: block;
-  width: 50%;
+  width: 100%;
+  max-width: 600px;
   margin-bottom: 10px;
   font-weight: bold;
   color: #333;
@@ -136,6 +108,7 @@
 .start-input {
   display: block;
   width: 100%;
+  max-width: 600px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -145,12 +118,14 @@
 
 .intro-container img {
   width: 50%;
-  min-width: 300px;
+  min-width: 250px;
+  max-width: 600px;
 }
 
 #start-btn {
   background-color: #c23117;
   width: 50%;
+  max-width: 600px;
   color: #fff;
   border: none;
   border-radius: 5px;
