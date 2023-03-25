@@ -9,10 +9,17 @@ function start() {
   userName = document.getElementById('name').value;
   let date = document.getElementById('date').value;
   let hour = document.getElementById('hour').value;
+
+  if (userName === '') {
+      alert('이름을 입력해주세요.');
+      return;
+  }
+
   if (date === '') {
       alert('생년월일을 입력해주세요.');
       return;
   }
+
   myDateTime = date + ' ' + hour + '시';
 
   console.log(myDateTime);
@@ -23,7 +30,15 @@ function start() {
 }
 
 function spinner() {
-  document.getElementById('loader').style.display = "block";
+  const div = document.createElement("div");
+
+  div.innerHTML =
+    `<div id="loader" class="loader">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>`;
+
+  chatMessages.appendChild(div)
+  chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
 function addMessage(message, sender, name) {
@@ -54,9 +69,10 @@ function sendMessage() {
     // user message 추가
     userMessages.push(message);
 
-    addMessage(newMessage, "user", userName); // 나중에 name에 유저 이름
-    // Send message to API and handle response here
+    addMessage(newMessage, "user", userName);
     chatInput.value = "";
+
+    spinner();
 
     getFortune(message);
   }
@@ -92,8 +108,11 @@ async function getFortune(message) {
       });
       const data = await response.json();
 
-      document.getElementById('loader').style.display = "none"; // spinner 제거
+       // spinner 제거
+      const child = document.getElementById('loader');
+      chatMessages.removeChild(child);
 
+      // 답변 메세지 저장 및 화면 표기
       astrologerMessages.push(data.assistant)
       appenAstrologerMessage(data.assistant)
       return data;

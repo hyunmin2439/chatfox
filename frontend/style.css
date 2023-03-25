@@ -1,7 +1,146 @@
+@media (min-width: 360px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  .start-label {
+    font-size: 1.25rem;
+  }
+  #start-btn {
+    font-size: 1.25rem;
+  }
+  .start-input {
+    font-size: 1rem;
+  }
+  .chat-messages {
+    font-size: 1rem;
+  }
+  .chat-item {
+    font-size: 0.75rem;
+  }
+  #toss-ad {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 760px) {
+  h1 {
+    font-size: 2.75rem;
+  }
+  .start-label {
+    font-size: 1.6rem;
+  }
+  #start-btn {
+    font-size: 1.6rem;
+  }
+  .start-input {
+    font-size: 1.25rem;
+  }
+  .chat-messages {
+    font-size: 1.1rem;
+  }
+  .chat-item {
+    font-size: 1rem;
+  }
+  #toss-ad {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  .start-label {
+    font-size: 2rem;
+  }
+  #start-btn {
+    font-size: 2rem;
+  }
+  .start-input {
+    font-size: 1.5rem;
+  }
+  .chat-messages {
+    font-size: 1.3rem;
+  }
+  .chat-item {
+    font-size: 1.1rem;
+  }
+  #toss-ad {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 2048px) {
+  h1 {
+    font-size: 5rem;
+  }
+  .start-label {
+    font-size: 3rem;
+  }
+  #start-btn {
+    font-size: 3rem;
+  }
+  .start-input {
+    font-size: 2rem;
+  }
+  .chat-messages {
+    font-size: 1.4rem;
+  }
+  .chat-item {
+    font-size: 1.2rem;
+  }
+  #toss-ad {
+    font-size: 1.25rem;
+  }
+}
+
+.start-inputs {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+.start-label {
+  display: block;
+  width: 50%;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.start-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.intro-container img {
+  width: 50%;
+  min-width: 300px;
+}
+
+#start-btn {
+  background-color: #c23117;
+  width: 50%;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#start-btn:hover {
+  background-color: #921904;
+}
+
 /* Chat container */
 .chat-container {
-  width: 100%;
-  max-width: 800px;
+  width: 70%;
   margin: 0 auto;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -19,7 +158,7 @@
 
 /* Chat messages */
 .chat-messages {
-  height: 500px;
+  height: 600px;
   padding: 10px;
   overflow-y: scroll;
 }
@@ -73,9 +212,13 @@
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #333;
+  background-color: #c23117;
   color: #fff;
   cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #921904;
 }
 
 .intro-container {
@@ -84,15 +227,10 @@
     justify-content: center;
     align-items: center;
 }
-
-.intro-container img {
-    width: 50%;
-    min-width: 300px;
-}
-
-#loader {
-    font-size: 25px;
-    text-align: center;
+ 
+.loader {
+    font-size: 40px;
+    text-align: left;
 }
 
 .kakao-ad {
