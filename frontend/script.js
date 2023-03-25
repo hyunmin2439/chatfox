@@ -32,10 +32,9 @@ function start() {
 function spinner() {
   const div = document.createElement("div");
 
-  div.innerHTML =
-    `<div id="loader" class="loader">
-      <i class="fa fa-spinner fa-spin"></i>
-    </div>`;
+  div.id = "loader";
+  div.classList.add("loader");
+  div.innerHTML = `<i class="fa fa-spinner fa-spin"></i>`;
 
   chatMessages.appendChild(div)
   chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -46,7 +45,10 @@ function addMessage(message, sender, name) {
   div.classList.add("message");
   div.classList.add(sender);
   div.innerHTML = `
-    <p class="meta">${name} <span>${message.time}</span></p>
+    <div class="chat-profile">
+      <img src="profile.png" class="chat-profile-img" />
+      <p class="meta">${name} <span>${message.time}</span></p>
+    </div>
     <p class="text">${message.text}</p>
   `;
   chatMessages.appendChild(div);
@@ -118,6 +120,10 @@ async function getFortune(message) {
       return data;
   } catch (error) {
       console.log(error);
+
+      // spinner 제거
+      const child = document.getElementById('loader');
+      chatMessages.removeChild(child);
   }
 }
 
