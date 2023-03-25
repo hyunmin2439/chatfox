@@ -1,0 +1,110 @@
+/* Chat container */
+.chat-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #efdfcf;
+}
+
+/* Chat header */
+.chat-header {
+  padding: 10px;
+  background-color: #651204;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Chat messages */
+.chat-messages {
+  height: 500px;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+/* Add styles to mark messages sent by the user */
+.chat-messages .message.user .meta {
+  text-align: right;
+  color: #825405;
+}
+
+.chat-messages .message.user .text {
+  background-color: #f4cc74;
+  color: #000000;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: auto;
+}
+
+/* Add styles to mark messages received by the astrologer */
+.chat-messages .message.astrologer .meta {
+  color: #c31f06;
+}
+
+.chat-messages .message.astrologer .text {
+  background-color: #f5a952;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: auto;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.chat-input button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column; /* 가로 정렳로 변경 */
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-container img {
+    width: 50%;
+    min-width: 300px;
+}
+
+#loader {
+    font-size: 25px;
+    text-align: center;
+}
+
+.kakao-ad {
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#toss-ad {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 20px;
+}
